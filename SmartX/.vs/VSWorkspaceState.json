@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\SmartX.Api",
-    "\\SmartX.Client"
+    "\\SmartX.Client",
+    "\\SmartX.Client\\Pages",
+    "\\SmartX.Client\\wwwroot",
+    "\\SmartX.Client\\wwwroot\\css"
   ],
-  "SelectedNode": "\\SmartX.Client\\_Imports.razor",
   "PreviewInSolutionExplorer": false
 }

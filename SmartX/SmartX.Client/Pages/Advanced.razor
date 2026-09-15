@@ -1,0 +1,113 @@
+﻿@page "/advanced"
+@inject HttpClient Http
+
+<h3>Advanced OOP & Data Structure Demonstrations</h3>
+
+<div class="row">
+    <!-- Operator Overloading -->
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header">Operator Overloading (Power Metric Aggregation)</div>
+            <div class="card-body">
+                <p>Calculates aggregate load: Meter 3 = Meter 1 + Meter 2</p>
+                <div class="mb-2">
+                    <label>Meter 1 (Watts)</label>
+                    <input type="number" class="form-control" @bind="meter1" />
+                </div>
+                <div class="mb-2">
+                    <label>Meter 2 (Watts)</label>
+                    <input type="number" class="form-control" @bind="meter2" />
+                </div>
+                <button class="btn btn-primary" @onclick="CalculateAggregate">Calculate Aggregate</button>
+                <p class="mt-2"><strong>Result:</strong> @aggregateResult Watts</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recursion -->
+    <div class="col-md-6">
+        <div class="card mb-3">
+            <div class="card-header">Recursive Deployment Validation</div>
+            <div class="card-body">
+                <p>Validates nested paths (e.g., "Facility A -> Zone 1 -> Sub-Zone B")</p>
+                <div class="mb-2">
+                    <label>Target Path</label>
+                    <input type="text" class="form-control" @bind="targetPath" placeholder="Facility A -> Zone 1 -> Sub-Zone B" />
+                </div>
+                <button class="btn btn-warning" @onclick="ValidatePath">Validate Path</button>
+                <p class="mt-2"><strong>Is Valid:</strong> @(isValid ? "Yes" : "No")</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <!-- Jagged Arrays -->
+    <div class="col-md-12">
+        <div class="card mb-3">
+            <div class="card-header">Advanced Arrays: Jagged Array to Optimized List</div>
+            <div class="card-body">
+                <p>Simulates batching raw telemetry into a jagged array, then flattening to a List&lt;T&gt;.</p>
+                <button class="btn btn-info text-white me-2" @onclick="AddBatch">Add Mock Batch</button>
+                <button class="btn btn-secondary" @onclick="GetHistory">Get Optimized History</button>
+                <p class="mt-2"><strong>Total Readings in Optimized List:</strong> @historyCount</p>
+                <p><strong>Data:</strong> @historyData</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private double meter1 = 150;
+    private double meter2 = 250;
+    private double aggregateResult = 0;
+
+    private string targetPath = "Facility A -> Zone 1 -> Sub-Zone B";
+    private bool isValid = false;
+
+    private int historyCount = 0;
+    private string historyData = "";
+
+    private async Task CalculateAggregate()
+    {
+        var request = new { Metric1 = new { Watts = meter1 }, Metric2 = new { Watts = meter2 } };
+        var response = await Http.PostAsJsonAsync("/api/metrics/aggregate", request);
+        if (response.IsSuccessStatusCode)
+        {
+            var result = await response.Content.ReadFromJsonAsync<AggregateResponse>();
+            aggregateResult = result?.AggregatedWatts ?? 0;
+        }
+    }
+
+    private async Task ValidatePath()
+    {
+        var request = new { TargetPath = targetPath };
+        var response = await Http.PostAsJsonAsync("/api/deployment/validate", request);
+        if (response.IsSuccessStatusCode)
+        {
+            var result = await response.Content.ReadFromJsonAsync<ValidationResponse>();
+            isValid = result?.IsValid ?? false;
+        }
+    }
+
+    private async Task AddBatch()
+    {
+        var mockBatch = new double[] { 10.5, 20.1, 15.3, 18.9 };
+        await Http.PostAsJsonAsync("/api/telemetry/batch", mockBatch);
+    }
+
+    private async Task GetHistory()
+    {
+        var response = await Http.GetAsync("/api/telemetry/history");
+        if (response.IsSuccessStatusCode)
+        {
+            var result = await response.Content.ReadFromJsonAsync<HistoryResponse>();
+            historyCount = result?.Count ?? 0;
+            historyData = string.Join(", ", result?.Data ?? new List<double>());
+        }
+    }
+
+    public class AggregateResponse { public double AggregatedWatts { get; set; } }
+    public class ValidationResponse { public string TargetPath { get; set; } public bool IsValid { get; set; } }
+    public class HistoryResponse { public int Count { get; set; } public List<double> Data { get; set; } }
+}
