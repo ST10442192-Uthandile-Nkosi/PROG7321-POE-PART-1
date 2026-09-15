@@ -131,3 +131,193 @@ code {
 .anomaly-pulse {
     animation: pulse-red 2s infinite;
 }
+
+.hero h1, article h1 {
+    font-size: 2rem;
+    margin-bottom: 0.4rem;
+}
+
+.eyebrow {
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-size: 0.72rem;
+    color: #5b3d8f;
+    font-weight: 700;
+}
+
+.lede {
+    max-width: 52rem;
+    color: #444;
+}
+
+.pillar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.pillar {
+    display: flex;
+    flex-direction: column;
+    min-height: 160px;
+    padding: 1.25rem;
+    border-radius: 14px;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid #d9d4e8;
+    background: linear-gradient(180deg, #f7f4ff 0%, #fff 70%);
+}
+
+.pillar.active:hover {
+    border-color: #6f42c1;
+    box-shadow: 0 10px 24px rgba(80, 40, 140, 0.12);
+}
+
+.pillar.locked {
+    opacity: 0.55;
+    background: #f4f4f4;
+}
+
+.pillar-index {
+    font-family: ui-monospace, monospace;
+    color: #6f42c1;
+}
+
+.pillar-cta {
+    margin-top: auto;
+    font-weight: 600;
+    color: #3a0647;
+}
+
+.section-links {
+    margin: 0 0 1rem;
+    color: #666;
+}
+
+.section-links a {
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.section-links a:hover {
+    text-decoration: underline;
+}
+
+.mesh-card {
+    border: 1px solid #d9d4e8;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.constellation {
+    width: 100%;
+    max-width: 360px;
+    background: radial-gradient(circle at 50% 50%, #1b1033 0%, #07040f 75%);
+    border-radius: 12px;
+}
+
+.orbit {
+    fill: none;
+    stroke: rgba(180, 160, 255, 0.25);
+    stroke-dasharray: 4 6;
+}
+
+.gateway-core {
+    fill: #f4e27c;
+}
+
+.gw-label {
+    fill: #f4e27c;
+    font-size: 8px;
+    font-family: ui-monospace, monospace;
+}
+
+.mesh-node {
+    fill: #4cc9f0;
+}
+
+.mesh-node.PowerConsumption {
+    fill: #f4a261;
+}
+
+.mesh-node.Actuator {
+    fill: #e056a0;
+}
+
+.mesh-node.fracture {
+    fill: #ff4d6d;
+}
+
+.mesh-node.silent {
+    fill: #6c757d;
+}
+
+.fracture-line {
+    stroke: #ff4d6d;
+    stroke-width: 1;
+    opacity: 0.7;
+}
+
+.steward-seal {
+    border-radius: 999px;
+    padding: 0.15rem 0.7rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.steward-seal.gold { background: #f4e27c; color: #3a2a00; }
+.steward-seal.silver { background: #d9dce3; color: #222; }
+.steward-seal.bronze { background: #c08457; color: #fff; }
+
+.alarm-stack {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.alarm {
+    border-left: 4px solid #dc3545;
+    background: #fff5f5;
+    padding: 0.85rem 1rem;
+    border-radius: 8px;
+}
+
+.alarm h3 {
+    font-size: 1.05rem;
+    margin: 0.2rem 0;
+}
+
+.narrative, .status-line, .tiny {
+    color: #555;
+}
+
+.tiny {
+    font-size: 0.82rem;
+}
+
+.trace {
+    max-height: 180px;
+    overflow: auto;
+    background: #111;
+    color: #b8f4c8;
+    padding: 0.75rem;
+    border-radius: 8px;
+    font-size: 0.75rem;
+}
+
+.nav-item .nav-link.disabled,
+.nav-item span.nav-link.disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+@media (max-width: 640px) {
+    article.content {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+}

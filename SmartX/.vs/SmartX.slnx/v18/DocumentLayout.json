@@ -3,52 +3,60 @@
   "WorkspaceRootPath": "C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Api\\Dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SmartX.Api\\Dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Client\\wwwroot\\css\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SmartX.Client\\wwwroot\\css\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Api\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SmartX.Api\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Client\\Pages\\Advanced.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SmartX.Client\\Pages\\Advanced.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Client\\Pages\\Counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SmartX.Client\\Pages\\Counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Api\\SmartX.Api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SmartX.Api\\SmartX.Api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Client\\Pages\\NotFound.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SmartX.Client\\Pages\\NotFound.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Client\\App.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SmartX.Client\\App.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Client\\Pages\\Home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SmartX.Client\\Pages\\Home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SmartX.Api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Client\\Pages\\Register.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SmartX.Client\\Pages\\Register.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Client\\Layout\\NavMenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SmartX.Client\\Layout\\NavMenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Client\\_Imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SmartX.Client\\_Imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Client\\Pages\\Home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SmartX.Client\\Pages\\Home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Client\\Properties\\launchSettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SmartX.Client\\Properties\\launchSettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Client\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SmartX.Client\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Api\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SmartX.Api\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Api\\Properties\\launchSettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SmartX.Api\\Properties\\launchSettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Api\\Dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SmartX.Api\\Dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Client\\Pages\\Counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SmartX.Client\\Pages\\Counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Client\\wwwroot\\css\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SmartX.Client\\wwwroot\\css\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -63,27 +71,87 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Dockerfile",
-              "DocumentMoniker": "C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Api\\Dockerfile",
-              "RelativeDocumentMoniker": "SmartX.Api\\Dockerfile",
-              "ToolTip": "C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Api\\Dockerfile",
-              "RelativeToolTip": "SmartX.Api\\Dockerfile",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-09-15T11:11:23.501Z",
+              "Title": "README.md",
+              "DocumentMoniker": "C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\README.md",
+              "RelativeDocumentMoniker": "README.md",
+              "ToolTip": "C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\README.md",
+              "RelativeToolTip": "README.md",
+              "ViewState": "AgIAADQAAAAAkJmZmRkWwF8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-09-15T20:28:53.636Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SmartX.Api.http",
+              "DocumentMoniker": "C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Api\\SmartX.Api.http",
+              "RelativeDocumentMoniker": "SmartX.Api\\SmartX.Api.http",
+              "ToolTip": "C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Api\\SmartX.Api.http",
+              "RelativeToolTip": "SmartX.Api\\SmartX.Api.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2026-09-15T20:23:14.453Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "SmartX.Api\\appsettings.json",
+              "ToolTip": "C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Api\\appsettings.json",
+              "RelativeToolTip": "SmartX.Api\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-09-15T20:23:09.151Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Register.razor",
+              "DocumentMoniker": "C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Client\\Pages\\Register.razor",
+              "RelativeDocumentMoniker": "SmartX.Client\\Pages\\Register.razor",
+              "ToolTip": "C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Client\\Pages\\Register.razor",
+              "RelativeToolTip": "SmartX.Client\\Pages\\Register.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-15T11:40:43.608Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Home.razor",
+              "DocumentMoniker": "C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Client\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "SmartX.Client\\Pages\\Home.razor",
+              "ToolTip": "C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Client\\Pages\\Home.razor",
+              "RelativeToolTip": "SmartX.Client\\Pages\\Home.razor",
+              "ViewState": "AgIAADgAAAAAAwAAAMAtwD0AAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-15T11:32:52.253Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Client\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "SmartX.Client\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Client\\Properties\\launchSettings.json",
+              "RelativeToolTip": "SmartX.Client\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-09-15T11:19:44.255Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "app.css",
-              "DocumentMoniker": "C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Client\\wwwroot\\css\\app.css",
-              "RelativeDocumentMoniker": "SmartX.Client\\wwwroot\\css\\app.css",
-              "ToolTip": "C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Client\\wwwroot\\css\\app.css",
-              "RelativeToolTip": "SmartX.Client\\wwwroot\\css\\app.css",
-              "ViewState": "AgIAAGsAAAAABQAAAAD8v4QAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-09-15T10:41:40.55Z",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Api\\Program.cs",
+              "RelativeDocumentMoniker": "SmartX.Api\\Program.cs",
+              "ToolTip": "C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Api\\Program.cs",
+              "RelativeToolTip": "SmartX.Api\\Program.cs",
+              "ViewState": "AgIAAIAAAABALzMzM3MvwHcAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-15T11:19:14.83Z",
               "EditorCaption": ""
             },
             {
@@ -94,14 +162,49 @@
               "RelativeDocumentMoniker": "SmartX.Client\\Pages\\Advanced.razor",
               "ToolTip": "C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Client\\Pages\\Advanced.razor",
               "RelativeToolTip": "SmartX.Client\\Pages\\Advanced.razor",
-              "ViewState": "AgIAAAUAAAAANjMzMzMIwHAAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAzczMzAwswH0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-09-15T10:40:58.05Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-15T10:40:58.05Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
+              "Title": "_Imports.razor",
+              "DocumentMoniker": "C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Client\\_Imports.razor",
+              "RelativeDocumentMoniker": "SmartX.Client\\_Imports.razor",
+              "ToolTip": "C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Client\\_Imports.razor",
+              "RelativeToolTip": "SmartX.Client\\_Imports.razor",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAowAkAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-15T11:42:13.452Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Client\\Program.cs",
+              "RelativeDocumentMoniker": "SmartX.Client\\Program.cs",
+              "ToolTip": "C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Client\\Program.cs",
+              "RelativeToolTip": "SmartX.Client\\Program.cs",
+              "ViewState": "AgIAAAAAAABAMzMzMzMLwAsAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-15T11:17:35.736Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Api\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "SmartX.Api\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Api\\Properties\\launchSettings.json",
+              "RelativeToolTip": "SmartX.Api\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-09-15T11:16:58.275Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "Counter.razor",
               "DocumentMoniker": "C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Client\\Pages\\Counter.razor",
               "RelativeDocumentMoniker": "SmartX.Client\\Pages\\Counter.razor",
@@ -109,112 +212,31 @@
               "RelativeToolTip": "SmartX.Client\\Pages\\Counter.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-09-15T10:40:49.672Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "App.razor",
-              "DocumentMoniker": "C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Client\\App.razor",
-              "RelativeDocumentMoniker": "SmartX.Client\\App.razor",
-              "ToolTip": "C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Client\\App.razor",
-              "RelativeToolTip": "SmartX.Client\\App.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-09-15T10:39:26.267Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "NotFound.razor",
-              "DocumentMoniker": "C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Client\\Pages\\NotFound.razor",
-              "RelativeDocumentMoniker": "SmartX.Client\\Pages\\NotFound.razor",
-              "ToolTip": "C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Client\\Pages\\NotFound.razor",
-              "RelativeToolTip": "SmartX.Client\\Pages\\NotFound.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-09-15T10:38:43.508Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Home.razor",
-              "DocumentMoniker": "C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Client\\Pages\\Home.razor",
-              "RelativeDocumentMoniker": "SmartX.Client\\Pages\\Home.razor",
-              "ToolTip": "C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Client\\Pages\\Home.razor",
-              "RelativeToolTip": "SmartX.Client\\Pages\\Home.razor",
-              "ViewState": "AgIAAAAAAADAMzMzM3MqwEsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-09-15T10:38:17.675Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Register.razor",
-              "DocumentMoniker": "C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Client\\Pages\\Register.razor",
-              "RelativeDocumentMoniker": "SmartX.Client\\Pages\\Register.razor",
-              "ToolTip": "C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Client\\Pages\\Register.razor",
-              "RelativeToolTip": "SmartX.Client\\Pages\\Register.razor",
-              "ViewState": "AgIAADIAAAAAAAAAAAAYwFUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-09-15T10:37:51.313Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "NavMenu.razor",
-              "DocumentMoniker": "C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Client\\Layout\\NavMenu.razor",
-              "RelativeDocumentMoniker": "SmartX.Client\\Layout\\NavMenu.razor",
-              "ToolTip": "C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Client\\Layout\\NavMenu.razor",
-              "RelativeToolTip": "SmartX.Client\\Layout\\NavMenu.razor",
-              "ViewState": "AgIAAAQAAACAzMzMzMwXwBoAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-09-15T10:35:48.985Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "_Imports.razor",
-              "DocumentMoniker": "C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Client\\_Imports.razor",
-              "RelativeDocumentMoniker": "SmartX.Client\\_Imports.razor",
-              "ToolTip": "C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Client\\_Imports.razor",
-              "RelativeToolTip": "SmartX.Client\\_Imports.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-09-15T10:15:50.457Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Client\\Program.cs",
-              "RelativeDocumentMoniker": "SmartX.Client\\Program.cs",
-              "ToolTip": "C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Client\\Program.cs",
-              "RelativeToolTip": "SmartX.Client\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-15T10:15:23.221Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-15T11:16:29.528Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Api\\Program.cs",
-              "RelativeDocumentMoniker": "SmartX.Api\\Program.cs",
-              "ToolTip": "C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Api\\Program.cs",
-              "RelativeToolTip": "SmartX.Api\\Program.cs",
-              "ViewState": "AgIAAAYAAAAAyczMzAwswNUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-15T10:14:42.272Z",
-              "EditorCaption": ""
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Api\\Dockerfile",
+              "RelativeDocumentMoniker": "SmartX.Api\\Dockerfile",
+              "ToolTip": "C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Api\\Dockerfile",
+              "RelativeToolTip": "SmartX.Api\\Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-09-15T11:11:23.501Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "app.css",
+              "DocumentMoniker": "C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Client\\wwwroot\\css\\app.css",
+              "RelativeDocumentMoniker": "SmartX.Client\\wwwroot\\css\\app.css",
+              "ToolTip": "C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Client\\wwwroot\\css\\app.css",
+              "RelativeToolTip": "SmartX.Client\\wwwroot\\css\\app.css",
+              "ViewState": "AgIAAGsAAAAABQAAAAD8v4QAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-09-15T10:41:40.55Z"
             }
           ]
         }

@@ -41,8 +41,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/emeris/source/repos/PROG7312 POE PART 1/PROG7321-POE-PART-1/SmartX/SmartX.Client/Pages/GatewayLab.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2F0ZXdheUxhYi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/emeris/source/repos/PROG7312 POE PART 1/PROG7321-POE-PART-1/SmartX/SmartX.Client/Pages/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/emeris/source/repos/PROG7312 POE PART 1/PROG7321-POE-PART-1/SmartX/SmartX.Client/Pages/Ingestion.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5nZXN0aW9uLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/emeris/source/repos/PROG7312 POE PART 1/PROG7321-POE-PART-1/SmartX/SmartX.Client/Pages/NotFound.razor]
@@ -51,6 +59,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/emeris/source/repos/PROG7312 POE PART 1/PROG7321-POE-PART-1/SmartX/SmartX.Client/Pages/Register.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/emeris/source/repos/PROG7312 POE PART 1/PROG7321-POE-PART-1/SmartX/SmartX.Client/Shared/PartLinks.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFBhcnRMaW5rcy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/emeris/source/repos/PROG7312 POE PART 1/PROG7321-POE-PART-1/SmartX/SmartX.Client/_Imports.razor]

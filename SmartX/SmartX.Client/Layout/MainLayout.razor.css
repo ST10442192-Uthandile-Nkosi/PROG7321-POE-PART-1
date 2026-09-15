@@ -1,77 +1,54 @@
 .page {
-    position: relative;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-main {
-    flex: 1;
-}
-
-.sidebar {
-    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
-}
-
-.top-row {
-    background-color: #f7f7f7;
-    border-bottom: 1px solid #d6d5d5;
-    justify-content: flex-end;
-    height: 3.5rem;
+.top-bar {
     display: flex;
     align-items: center;
+    gap: 0.85rem;
+    height: 3.75rem;
+    padding: 0 1.5rem;
+    background: linear-gradient(90deg, #071226 0%, #3a0647 100%);
 }
 
-    .top-row ::deep a, .top-row ::deep .btn-link {
-        white-space: nowrap;
-        margin-left: 1.5rem;
-        text-decoration: none;
-    }
+/* Solid Home button so it is obvious this returns to the landing page */
+.home-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.85rem;
+    border-radius: 8px;
+    background: #fff;
+    color: #3a0647;
+    font-weight: 700;
+    text-decoration: none;
+}
 
-    .top-row ::deep a:hover, .top-row ::deep .btn-link:hover {
-        text-decoration: underline;
-    }
+.home-button:hover {
+    background: #f4e27c;
+    text-decoration: none;
+}
 
-    .top-row ::deep a:first-child {
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
+.home-icon {
+    width: 1.05rem;
+    height: 1.05rem;
+}
+
+.brand-label {
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 600;
+}
+
+.content {
+    flex: 1;
+    padding-top: 1.25rem;
+    padding-bottom: 2rem;
+}
 
 @media (max-width: 640.98px) {
-    .top-row {
-        justify-content: space-between;
-    }
-
-    .top-row ::deep a, .top-row ::deep .btn-link {
-        margin-left: 0;
-    }
-}
-
-@media (min-width: 641px) {
-    .page {
-        flex-direction: row;
-    }
-
-    .sidebar {
-        width: 250px;
-        height: 100vh;
-        position: sticky;
-        top: 0;
-    }
-
-    .top-row {
-        position: sticky;
-        top: 0;
-        z-index: 1;
-    }
-
-    .top-row.auth ::deep a:first-child {
-        flex: 1;
-        text-align: right;
-        width: 0;
-    }
-
-    .top-row, article {
-        padding-left: 2rem !important;
-        padding-right: 1.5rem !important;
+    .top-bar {
+        padding: 0 1rem;
     }
 }

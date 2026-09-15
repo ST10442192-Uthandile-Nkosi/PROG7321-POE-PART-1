@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "COM2yZdL3sM=",
+  "dgSpecHash": "9s+rWiiHh5I=",
   "success": true,
-  "projectFilePath": "C:\\Users\\emeris\\source\\repos\\SmartX\\SmartX.Api\\SmartX.Api.csproj",
+  "projectFilePath": "C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Api\\SmartX.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\emeris\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.12\\microsoft.aspnetcore.openapi.10.0.12.nupkg.sha512",
     "C:\\Users\\emeris\\.nuget\\packages\\microsoft.openapi\\2.12.0\\microsoft.openapi.2.12.0.nupkg.sha512"

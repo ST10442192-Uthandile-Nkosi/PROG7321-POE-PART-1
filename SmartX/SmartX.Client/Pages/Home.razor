@@ -1,76 +1,25 @@
 ﻿@page "/"
-@inject HttpClient Http
 
-<h3>Smart-X Telemetry Dashboard</h3>
-<p class="text-muted">Dynamic Engagement Feature: Proactive Alert Gamification & Visual Anomaly Detection</p>
+<PageTitle>Smart-X</PageTitle>
 
-<div class="row">
-    <div class="col-md-6">
-        <div class="card mb-3">
-            <div class="card-header">Simulate Telemetry Ingestion</div>
-            <div class="card-body">
-                <div class="mb-3">
-                    <label>Device ID</label>
-                    <input type="text" class="form-control" @bind="deviceId" value="ESP32-001" />
-                </div>
-                <div class="mb-3">
-                    <label>Value (e.g., Soil Moisture %)</label>
-                    <input type="number" class="form-control" @bind="telemetryValue" />
-                </div>
-                <button class="btn btn-primary" @onclick="SendTelemetry">Send Telemetry</button>
-            </div>
-        </div>
+@* Startup menu: three architectural pillars required by Part 1 *@
+<h1>Smart-X</h1>
+<p class="lede">Select a module to continue.</p>
+
+<div class="pillar-grid">
+    <a class="pillar active" href="ingestion">
+        <h2>Sensor Data Ingestion and Telemetry</h2>
+        <p>Implemented in this part.</p>
+        <span class="pillar-cta">Open</span>
+    </a>
+    <div class="pillar locked" aria-disabled="true">
+        <h2>Real-Time Command Stream and History</h2>
+        <p>Disabled — to be implemented in Part 2.</p>
+        <span class="pillar-cta">Disabled</span>
     </div>
-
-    <div class="col-md-6">
-        <div class="card mb-3 @anomalyClass">
-            <div class="card-header">Real-Time Visual Feedback</div>
-            <div class="card-body">
-                <h4>Current Value: @telemetryValue</h4>
-                <p class="fw-bold">@statusMessage</p>
-                <div class="progress" style="height: 25px;">
-                    <div class="progress-bar @progressBarClass" role="progressbar" style="width: @progressWidth%" aria-valuenow="@progressWidth" aria-valuemin="0" aria-valuemax="100">
-                        @progressWidth%
-                    </div>
-                </div>
-                <p class="mt-3"><strong>System Stability Points:</strong> @stabilityPoints <span class="badge bg-info">Gamification Metric</span></p>
-            </div>
-        </div>
+    <div class="pillar locked" aria-disabled="true">
+        <h2>Network Topology and Mesh Routing</h2>
+        <p>Disabled — to be implemented in the final PoE.</p>
+        <span class="pillar-cta">Disabled</span>
     </div>
 </div>
-
-@code {
-    private string deviceId = "ESP32-001";
-    private double telemetryValue = 50;
-    private string statusMessage = "Awaiting data...";
-    private string anomalyClass = "";
-    private string progressBarClass = "bg-success";
-    private int progressWidth = 50;
-    private int stabilityPoints = 100;
-
-    private async Task SendTelemetry()
-    {
-        var packet = new { DeviceId = deviceId, Timestamp = DateTime.UtcNow.ToString("o"), Value = telemetryValue };
-        
-        // Evaluate locally for immediate visual feedback (Engagement Strategy)
-        if (telemetryValue < 20 || telemetryValue > 80)
-        {
-            statusMessage = "ANOMALY DETECTED: Value outside safe operational thresholds!";
-            anomalyClass = "border border-danger shadow-lg anomaly-pulse"; // Triggers CSS animation
-            progressBarClass = "bg-danger";
-            progressWidth = (int)telemetryValue;
-            stabilityPoints -= 10; // Gamification: penalize anomalies to encourage troubleshooting
-        }
-        else
-        {
-            statusMessage = "System Normal: Telemetry within optimal parameters.";
-            anomalyClass = "border border-success";
-            progressBarClass = "bg-success";
-            progressWidth = (int)telemetryValue;
-            stabilityPoints += 5; // Gamification: reward stability
-        }
-
-        // Push data to API to prove integration
-        await Http.PostAsJsonAsync("/api/telemetry/ingest-float", packet);
-    }
-}

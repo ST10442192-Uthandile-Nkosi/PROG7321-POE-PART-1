@@ -1,214 +1,201 @@
+using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.Mvc;
-using SmartX.Api.Models;
+using SmartX.Api.Services;
+using SmartX.Shared.Sensors;
+using SmartX.Shared.Telemetry;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// 1. CORS Configuration: Allow the Blazor Client to communicate with this API
+// Allow the Blazor dashboard to call this API from localhost.
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowBlazorClient", policy =>
     {
-        // IMPORTANT: Update these URLs to match your SmartX.Client launchSettings.json ports
-        policy.WithOrigins("https://localhost:7001", "http://localhost:5001")
-              .AllowAnyHeader()
-              .AllowAnyMethod();
+        policy.WithOrigins(
+                "https://localhost:7091",
+                "http://localhost:5197",
+                "http://localhost:8088")
+            .AllowAnyHeader()
+            .AllowAnyMethod();
     });
 });
 
-// Register services as Singletons to maintain state across API requests
+builder.Services.Configure<FormOptions>(o => o.MultipartBodyLengthLimit = 10 * 1024 * 1024);
+builder.Services.AddOpenApi();
+builder.Services.AddSingleton<SensorRegistry>();
+builder.Services.AddSingleton<TelemetryIngestionService>();
 builder.Services.AddSingleton<TelemetryBatchProcessor>();
 builder.Services.AddSingleton<DeploymentValidator>();
+builder.Services.AddSingleton<AttachmentStore>();
+builder.Services.AddSingleton<GatewayIntegrityService>();
+builder.Services.AddHostedService<MeshSeedHostedService>();
 
 var app = builder.Build();
 
 app.UseCors("AllowBlazorClient");
+app.MapOpenApi();
 
-// --- ENDPOINT 1: Sensor Registration ---
-app.MapPost("/api/sensors/register", (SensorRegistration registration) =>
+// --- Sensors ---
+app.MapGet("/", () => Results.Ok(new { Service = "Smart-X Gateway", Status = "ready" }));
+
+app.MapGet("/api/sensors", (SensorRegistry registry) => Results.Ok(registry.All()));
+
+app.MapGet("/api/sensors/{mac}", (string mac, SensorRegistry registry) =>
 {
-    return Results.Ok(new { Message = "Sensor registered successfully", Data = registration });
+    var sensor = registry.Get(mac);
+    return sensor is null ? Results.NotFound() : Results.Ok(sensor);
 });
 
-// --- ENDPOINT 2: Generics Demonstration (Telemetry Ingestion) ---
-// Proves that the generic wrapper handles disparate types without boxing/unboxing overhead
-app.MapPost("/api/telemetry/ingest-float", (TelemetryPacket<float> packet) =>
-    Results.Ok(new { Message = "Float telemetry received", Packet = packet }));
-
-app.MapPost("/api/telemetry/ingest-int", (TelemetryPacket<int> packet) =>
-    Results.Ok(new { Message = "Int telemetry received", Packet = packet }));
-
-app.MapPost("/api/telemetry/ingest-bool", (TelemetryPacket<bool> packet) =>
-    Results.Ok(new { Message = "Bool telemetry received", Packet = packet }));
-
-// --- ENDPOINT 3: Media/Log Attachment (File Upload) ---
-app.MapPost("/api/sensors/{id}/upload", async (string id, IFormFile file) =>
+app.MapPost("/api/sensors/register", (
+    SensorRegistrationRequest request,
+    SensorRegistry registry,
+    DeploymentValidator validator) =>
 {
-    if (file == null || file.Length == 0)
-        return Results.BadRequest("No file uploaded.");
-
-    var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "Uploads");
-    if (!Directory.Exists(uploadsFolder))
-        Directory.CreateDirectory(uploadsFolder);
-
-    var filePath = Path.Combine(uploadsFolder, file.FileName);
-    using (var stream = new FileStream(filePath, FileMode.Create))
+    // Recursive check: Facility -> Zone -> Sub-Zone
+    var validation = validator.ValidateNodePath(request.Location, request.Category.ToString());
+    if (!validation.IsValid)
     {
-        await file.CopyToAsync(stream);
+        return Results.BadRequest(new { Message = "Deployment path failed recursive validation.", validation });
     }
 
-    return Results.Ok(new { Message = "File uploaded successfully", FileName = file.FileName });
+    try
+    {
+        var profile = registry.Register(request);
+        return Results.Ok(profile);
+    }
+    catch (InvalidOperationException ex)
+    {
+        return Results.BadRequest(new { ex.Message });
+    }
 });
 
-// --- ENDPOINT 4: Advanced Arrays and Lists ---
-app.MapPost("/api/telemetry/batch", ([FromBody] double[] newBatch, [FromServices] TelemetryBatchProcessor processor) =>
+// Multipart log/photo upload — encrypted on disk (AES-256).
+app.MapPost("/api/sensors/{mac}/upload", async (
+    string mac,
+    IFormFile file,
+    SensorRegistry registry,
+    AttachmentStore store,
+    CancellationToken cancellationToken) =>
 {
-    processor.AddBatch(newBatch);
-    return Results.Ok(new { Message = "Batch added to jagged array" });
-});
+    if (registry.Get(mac) is null)
+    {
+        return Results.NotFound(new { Message = "Register the sensor first." });
+    }
 
-app.MapGet("/api/telemetry/history", ([FromServices] TelemetryBatchProcessor processor) =>
+    if (file.Length == 0)
+    {
+        return Results.BadRequest("No file uploaded.");
+    }
+
+    var attachment = await store.SaveAsync(mac, file, cancellationToken);
+    registry.AddAttachment(mac, attachment);
+    return Results.Ok(attachment);
+}).DisableAntiforgery();
+
+// Typed ingest: TelemetryPacket<float>, <int>, and <bool> (no boxing).
+app.MapPost("/api/telemetry/ingest-float", (TelemetryPacket<float> packet, TelemetryIngestionService telemetry) =>
+    Results.Ok(telemetry.IngestFloat(packet)));
+
+app.MapPost("/api/telemetry/ingest-int", (TelemetryPacket<int> packet, TelemetryIngestionService telemetry) =>
+    Results.Ok(telemetry.IngestInt(packet)));
+
+app.MapPost("/api/telemetry/ingest-bool", (TelemetryPacket<bool> packet, TelemetryIngestionService telemetry) =>
+    Results.Ok(telemetry.IngestBool(packet)));
+
+app.MapPost("/api/telemetry/ingest", (TelemetryIngestRequest request, TelemetryIngestionService telemetry) =>
 {
-    var optimizedList = processor.FlattenToOptimizedList();
-    return Results.Ok(new { Count = optimizedList.Count, Data = optimizedList });
+    if (string.IsNullOrWhiteSpace(request.DeviceId))
+    {
+        return Results.BadRequest(new { Message = "Device is required." });
+    }
+
+    var kind = request.ValueKind.Trim().ToLowerInvariant();
+    return kind switch
+    {
+        "float" or "double" or "moisture" => IngestMoisture(request, telemetry),
+        "int" or "power" or "watts" => IngestPower(request, telemetry),
+        "bool" or "actuator" => Results.Ok(telemetry.IngestBool(new TelemetryPacket<bool>
+        {
+            DeviceId = request.DeviceId,
+            Timestamp = DateTimeOffset.UtcNow,
+            Value = request.BooleanValue ?? ((request.NumericValue ?? 0) >= 1),
+            MetricName = string.IsNullOrWhiteSpace(request.MetricName) ? "actuator_state" : request.MetricName,
+            Unit = "state"
+        })),
+        _ => Results.BadRequest(new { Message = "Type must be float, int, or bool." })
+    };
 });
 
-// --- ENDPOINT 5: Operator Overloading Demonstration ---
+app.MapGet("/api/telemetry/recent", (TelemetryIngestionService telemetry, [FromQuery] int take = 40) =>
+    Results.Ok(telemetry.Recent(take)));
+
+app.MapPost("/api/telemetry/batch", ([FromBody] double[] newBatch, TelemetryBatchProcessor processor, [FromQuery] int facility = 0) =>
+{
+    processor.AddBatch(newBatch, facility);
+    return Results.Ok(new { Samples = newBatch.Length });
+});
+
+app.MapGet("/api/telemetry/history", (TelemetryBatchProcessor processor) =>
+    Results.Ok(processor.FlattenToOptimizedList())); // jagged bursts -> List<double>
+
+// Meter3 = Meter1 + Meter2 (overloaded + and >).
 app.MapPost("/api/metrics/aggregate", ([FromBody] MetricAggregateRequest request) =>
 {
-    // This explicitly uses the overloaded '+' operator defined in the PowerMetric class
-    var result = request.Metric1 + request.Metric2;
-    return Results.Ok(new { AggregatedWatts = result.Watts });
-});
-
-// --- ENDPOINT 6: Recursion Demonstration ---
-app.MapPost("/api/deployment/validate", ([FromBody] ValidationRequest request, [FromServices] DeploymentValidator validator) =>
-{
-    // Predefined mock nested deployment tree for demonstration
-    var root = new DeploymentNode
+    var combined = request.Metric1 + request.Metric2;
+    var delta = request.Metric1 - request.Metric2;
+    var limit = new PowerMetric { Watts = request.TransformerLimitWatts, MeterId = "TX" };
+    return Results.Ok(new MetricAggregateResponse
     {
-        Name = "Facility A",
-        Children = new List<DeploymentNode>
-        {
-            new DeploymentNode
-            {
-                Name = "Zone 1",
-                Children = new List<DeploymentNode>
-                {
-                    new DeploymentNode { Name = "Sub-Zone B" }
-                }
-            }
-        }
-    };
-
-    bool isValid = validator.ValidateNodePath(root, request.TargetPath);
-    return Results.Ok(new { TargetPath = request.TargetPath, IsValid = isValid });
+        AggregatedWatts = combined.Watts,
+        DeltaWatts = delta.Watts,
+        ExceedsTransformer = combined > limit,
+        CombinedMeterId = combined.MeterId
+    });
 });
+
+app.MapGet("/api/deployment/tree", (DeploymentValidator validator) =>
+    Results.Ok(new { validator.Root, NodeCount = validator.CountNodes() }));
+
+app.MapPost("/api/deployment/validate", ([FromBody] SmartX.Shared.Deployment.ValidationRequest request, DeploymentValidator validator) =>
+    Results.Ok(validator.ValidateNodePath(request.TargetPath, request.SensorCategory)));
+
+app.MapGet("/api/gateway/integrity", (GatewayIntegrityService integrity) =>
+    Results.Ok(integrity.Build()));
 
 app.Run();
 
-// =====================================================================
-// ADVANCED C# MODELS (Meeting all specific rubric requirements)
-// =====================================================================
-
-namespace SmartX.Api.Models
+static IResult IngestMoisture(TelemetryIngestRequest request, TelemetryIngestionService telemetry)
 {
-    // 1. GENERICS: Reusable wrapper without boxing/unboxing overhead
-    public class TelemetryPacket<T>
+    var value = (float)(request.NumericValue ?? 0);
+    if (value is < 0 or > 100)
     {
-        public string DeviceId { get; set; } = string.Empty;
-        public string Timestamp { get; set; } = string.Empty;
-        public T Value { get; default!; }
+        return Results.BadRequest(new { Message = "Soil moisture must be between 0 and 100 %VWC." });
     }
 
-    // 2. OPERATOR OVERLOADING: Allows direct aggregation of sensor values
-    public class PowerMetric
+    return Results.Ok(telemetry.IngestFloat(new TelemetryPacket<float>
     {
-        public double Watts { get; set; }
+        DeviceId = request.DeviceId,
+        Timestamp = DateTimeOffset.UtcNow,
+        Value = value,
+        MetricName = string.IsNullOrWhiteSpace(request.MetricName) ? "soil_moisture" : request.MetricName,
+        Unit = string.IsNullOrWhiteSpace(request.Unit) ? "%VWC" : request.Unit
+    }));
+}
 
-        public static PowerMetric operator +(PowerMetric a, PowerMetric b)
-        {
-            return new PowerMetric { Watts = a.Watts + b.Watts };
-        }
-
-        public static PowerMetric operator -(PowerMetric a, PowerMetric b)
-        {
-            return new PowerMetric { Watts = a.Watts - b.Watts };
-        }
+static IResult IngestPower(TelemetryIngestRequest request, TelemetryIngestionService telemetry)
+{
+    var value = (int)(request.NumericValue ?? 0);
+    if (value is < 0 or > 20000)
+    {
+        return Results.BadRequest(new { Message = "Power must be between 0 and 20000 W." });
     }
 
-    public class MetricAggregateRequest
+    return Results.Ok(telemetry.IngestInt(new TelemetryPacket<int>
     {
-        public PowerMetric Metric1 { get; set; } = new();
-        public PowerMetric Metric2 { get; set; } = new();
-    }
-
-    // 3. ADVANCED ARRAYS AND LISTS: Jagged array managing sequential batches
-    public class TelemetryBatchProcessor
-    {
-        // Jagged array: [batchIndex][readingIndex]
-        private double[][] _historicalBatches = new double[5][];
-        private int _batchIndex = 0;
-
-        public void AddBatch(double[] newBatch)
-        {
-            _historicalBatches[_batchIndex] = newBatch;
-            _batchIndex = (_batchIndex + 1) % 5; // Circular buffer to keep only last 5 batches
-        }
-
-        public List<double> FlattenToOptimizedList()
-        {
-            List<double> optimizedList = new List<double>();
-            foreach (var batch in _historicalBatches)
-            {
-                if (batch != null)
-                {
-                    optimizedList.AddRange(batch); // Transfer to optimized Collection
-                }
-            }
-            return optimizedList;
-        }
-    }
-
-    // 4. RECURSION: Validates nested device deployment trees
-    public class DeploymentNode
-    {
-        public string Name { get; set; } = string.Empty;
-        public List<DeploymentNode> Children { get; set; } = new List<DeploymentNode>();
-    }
-
-    public class DeploymentValidator
-    {
-        public bool ValidateNodePath(DeploymentNode currentNode, string targetPath, string currentPath = "")
-        {
-            string newPath = string.IsNullOrEmpty(currentPath)
-                ? currentNode.Name
-                : $"{currentPath} -> {currentNode.Name}";
-
-            if (newPath.Equals(targetPath, StringComparison.OrdinalIgnoreCase))
-            {
-                return true;
-            }
-
-            foreach (var child in currentNode.Children)
-            {
-                if (ValidateNodePath(child, targetPath, newPath))
-                {
-                    return true;
-                }
-            }
-            return false;
-        }
-    }
-
-    public class ValidationRequest
-    {
-        public string TargetPath { get; set; } = string.Empty;
-    }
-
-    public class SensorRegistration
-    {
-        public string MacAddress { get; set; } = string.Empty;
-        public string Location { get; set; } = string.Empty;
-        public string Category { get; set; } = string.Empty;
-    }
+        DeviceId = request.DeviceId,
+        Timestamp = DateTimeOffset.UtcNow,
+        Value = value,
+        MetricName = string.IsNullOrWhiteSpace(request.MetricName) ? "active_power" : request.MetricName,
+        Unit = string.IsNullOrWhiteSpace(request.Unit) ? "W" : request.Unit
+    }));
 }

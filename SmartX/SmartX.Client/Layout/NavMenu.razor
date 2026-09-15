@@ -1,6 +1,6 @@
 ﻿<div class="top-row ps-3 navbar navbar-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="">Smart-X IoT Ecosystem</a>
+        <a class="navbar-brand" href="">Smart-X</a>
     </div>
 </div>
 
@@ -9,30 +9,22 @@
 <div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
     <nav class="flex-column">
         <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="bi bi-house-door-fill" aria-hidden="true"></span> Dashboard (Ingestion & Telemetry)
-            </NavLink>
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">Home</NavLink>
         </div>
         <div class="nav-item px-3">
-            <NavLink class="nav-link disabled" href="#" aria-disabled="true">
-                <span class="bi bi-plus-square-fill" aria-hidden="true"></span> Real-Time Command Stream (Disabled - Part 2)
-            </NavLink>
+            <NavLink class="nav-link" href="ingestion">Telemetry</NavLink>
         </div>
         <div class="nav-item px-3">
-            <NavLink class="nav-link disabled" href="#" aria-disabled="true">
-                <span class="bi bi-list-nested" aria-hidden="true"></span> Network Topology (Disabled - Final PoE)
-            </NavLink>
+            <NavLink class="nav-link" href="register">Sensors</NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="tools">Tools</NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <span class="nav-link disabled" aria-disabled="true">Commands</span>
+        </div>
+        <div class="nav-item px-3">
+            <span class="nav-link disabled" aria-disabled="true">Topology</span>
         </div>
     </nav>
 </div>
-
-@code {
-    private bool collapseNavMenu = true;
-
-    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
-
-    private void ToggleNavMenu()
-    {
-        collapseNavMenu = !collapseNavMenu;
-    }
-}

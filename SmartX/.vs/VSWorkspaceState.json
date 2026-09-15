@@ -2,10 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\SmartX.Api",
+    "\\SmartX.Api\\Properties",
+    "\\SmartX.Client",
     "\\SmartX.Client\\Pages",
-    "\\SmartX.Client\\wwwroot",
-    "\\SmartX.Client\\wwwroot\\css"
+    "\\SmartX.Client\\Properties"
   ],
-  "SelectedNode": "\\SmartX.Api\\Dockerfile",
+  "SelectedNode": "\\README.md",
   "PreviewInSolutionExplorer": false
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QpQk4DAh6Xk=",
+  "dgSpecHash": "Mkkw4yfF4ec=",
   "success": true,
-  "projectFilePath": "C:\\Users\\emeris\\source\\repos\\SmartX\\SmartX.Client\\SmartX.Client.csproj",
+  "projectFilePath": "C:\\Users\\emeris\\source\\repos\\PROG7312 POE PART 1\\PROG7321-POE-PART-1\\SmartX\\SmartX.Client\\SmartX.Client.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\emeris\\.nuget\\packages\\microsoft.aspnetcore.app.internal.assets\\10.0.12\\microsoft.aspnetcore.app.internal.assets.10.0.12.nupkg.sha512",
     "C:\\Users\\emeris\\.nuget\\packages\\microsoft.aspnetcore.authorization\\10.0.12\\microsoft.aspnetcore.authorization.10.0.12.nupkg.sha512",

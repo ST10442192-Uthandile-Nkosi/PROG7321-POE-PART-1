@@ -107,7 +107,20 @@
         }
     }
 
-    public class AggregateResponse { public double AggregatedWatts { get; set; } }
-    public class ValidationResponse { public string TargetPath { get; set; } public bool IsValid { get; set; } }
-    public class HistoryResponse { public int Count { get; set; } public List<double> Data { get; set; } }
+     public class AggregateResponse 
+    { 
+        public double AggregatedWatts { get; set; } 
+    }
+    
+    public class ValidationResponse 
+    { 
+        public string TargetPath { get; set; } = string.Empty; 
+        public bool IsValid { get; set; } 
+    }
+    
+    public class HistoryResponse 
+    { 
+        public int Count { get; set; } 
+        public List<double> Data { get; set; } = new List<double>(); 
+    }
 }
