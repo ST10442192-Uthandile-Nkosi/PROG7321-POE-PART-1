@@ -33,6 +33,10 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/emeris/source/repos/PROG7312 POE PART 1/PROG7321-POE-PART-1/SmartX/SmartX.Client/Pages/Advanced.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWR2YW5jZWQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/emeris/source/repos/PROG7312 POE PART 1/PROG7321-POE-PART-1/SmartX/SmartX.Client/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -47,10 +51,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/emeris/source/repos/PROG7312 POE PART 1/PROG7321-POE-PART-1/SmartX/SmartX.Client/Pages/Register.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXIucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/emeris/source/repos/PROG7312 POE PART 1/PROG7321-POE-PART-1/SmartX/SmartX.Client/Pages/Weather.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV2VhdGhlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/emeris/source/repos/PROG7312 POE PART 1/PROG7321-POE-PART-1/SmartX/SmartX.Client/_Imports.razor]

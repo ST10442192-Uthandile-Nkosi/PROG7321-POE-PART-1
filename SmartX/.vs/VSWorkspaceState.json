@@ -2,10 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\SmartX.Api",
-    "\\SmartX.Client",
     "\\SmartX.Client\\Pages",
     "\\SmartX.Client\\wwwroot",
     "\\SmartX.Client\\wwwroot\\css"
   ],
+  "SelectedNode": "\\SmartX.Api\\Dockerfile",
   "PreviewInSolutionExplorer": false
 }
